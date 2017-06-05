@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mfc/projects/university/Student.cpp
+iostream
+-
+ctype.h
+-
+Student.h
+/home/mfc/projects/university/Student.h
+
+/home/mfc/projects/university/Student.h
+string
+-
+vector
+-
+
+/home/mfc/projects/university/main.cpp
+iostream
+-
+Student.h
+/home/mfc/projects/university/Student.h
+
