@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mfc/projects/university-cpp-project/CLI.h">
-			<Option target="university"/>
-		</Unit>
 		<Unit filename="/home/mfc/projects/university-cpp-project/Contact.h">
 			<Option target="university"/>
 		</Unit>
@@ -100,6 +97,12 @@
 			<Option target="university"/>
 		</Unit>
 		<Unit filename="/home/mfc/projects/university-cpp-project/Student.h">
+			<Option target="university"/>
+		</Unit>
+		<Unit filename="/home/mfc/projects/university-cpp-project/University.cpp">
+			<Option target="university"/>
+		</Unit>
+		<Unit filename="/home/mfc/projects/university-cpp-project/University.h">
 			<Option target="university"/>
 		</Unit>
 		<Unit filename="/home/mfc/projects/university-cpp-project/main.cpp">

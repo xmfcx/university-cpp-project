@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/mfc/projects/university-cpp-project/CLI.h
-iostream
--
-
 /home/mfc/projects/university-cpp-project/Contact.h
 iostream
 -
@@ -40,11 +36,27 @@ Contact.h
 Department.h
 /home/mfc/projects/university-cpp-project/Department.h
 
+/home/mfc/projects/university-cpp-project/University.cpp
+University.h
+/home/mfc/projects/university-cpp-project/University.h
+
+/home/mfc/projects/university-cpp-project/University.h
+iostream
+-
+vector
+-
+map
+-
+exception
+-
+Student.h
+/home/mfc/projects/university-cpp-project/Student.h
+
 /home/mfc/projects/university-cpp-project/main.cpp
 iostream
 -
 Student.h
 /home/mfc/projects/university-cpp-project/Student.h
-CLI.h
-/home/mfc/projects/university-cpp-project/CLI.h
+University.h
+/home/mfc/projects/university-cpp-project/University.h
 

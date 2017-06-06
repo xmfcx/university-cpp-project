@@ -7,10 +7,17 @@ CMakeFiles/university.dir/Student.cpp.o
  /home/mfc/projects/university-cpp-project/Faculty.h
  /home/mfc/projects/university-cpp-project/Student.cpp
  /home/mfc/projects/university-cpp-project/Student.h
-CMakeFiles/university.dir/main.cpp.o
- /home/mfc/projects/university-cpp-project/CLI.h
+CMakeFiles/university.dir/University.cpp.o
  /home/mfc/projects/university-cpp-project/Contact.h
  /home/mfc/projects/university-cpp-project/Department.h
  /home/mfc/projects/university-cpp-project/Faculty.h
  /home/mfc/projects/university-cpp-project/Student.h
+ /home/mfc/projects/university-cpp-project/University.cpp
+ /home/mfc/projects/university-cpp-project/University.h
+CMakeFiles/university.dir/main.cpp.o
+ /home/mfc/projects/university-cpp-project/Contact.h
+ /home/mfc/projects/university-cpp-project/Department.h
+ /home/mfc/projects/university-cpp-project/Faculty.h
+ /home/mfc/projects/university-cpp-project/Student.h
+ /home/mfc/projects/university-cpp-project/University.h
  /home/mfc/projects/university-cpp-project/main.cpp

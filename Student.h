@@ -43,6 +43,7 @@ public:
     //Name
     bool setName(const std::string &name);
 
+
     const std::string &getName() const;
 
     //Email
@@ -57,13 +58,14 @@ public:
     };
     std::vector<CourseGrade> Courses;
 
+
+
 private:
     Gender gender;
     int Id;
     Date date;
     std::string name;
     std::string email;
-public:
 
 };
 
