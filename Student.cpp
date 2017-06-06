@@ -66,7 +66,7 @@ bool Student::setName(const std::string &name) {
     bool name_is_letter_only = true;
     for(int i = 0; i < name.length(); i++)
     {
-        if(!isalpha(name[i]))
+        if(!(isalpha(name[i]) || ' '))
         {
             name_is_letter_only = false;
             break;

@@ -6,23 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/home/mfc/projects/university/Student.cpp
+/home/mfc/projects/university-cpp-project/CLI.h
+iostream
+-
+
+/home/mfc/projects/university-cpp-project/Contact.h
+iostream
+-
+
+/home/mfc/projects/university-cpp-project/Department.h
+Faculty.h
+/home/mfc/projects/university-cpp-project/Faculty.h
+
+/home/mfc/projects/university-cpp-project/Faculty.h
+string
+-
+
+/home/mfc/projects/university-cpp-project/Student.cpp
 iostream
 -
 ctype.h
 -
 Student.h
-/home/mfc/projects/university/Student.h
+/home/mfc/projects/university-cpp-project/Student.h
 
-/home/mfc/projects/university/Student.h
+/home/mfc/projects/university-cpp-project/Student.h
 string
 -
 vector
 -
+Contact.h
+/home/mfc/projects/university-cpp-project/Contact.h
+Department.h
+/home/mfc/projects/university-cpp-project/Department.h
 
-/home/mfc/projects/university/main.cpp
+/home/mfc/projects/university-cpp-project/main.cpp
 iostream
 -
 Student.h
-/home/mfc/projects/university/Student.h
+/home/mfc/projects/university-cpp-project/Student.h
+CLI.h
+/home/mfc/projects/university-cpp-project/CLI.h
 

@@ -4,24 +4,29 @@
 
 #ifndef UNIVERSITY_STUDENT_H
 #define UNIVERSITY_STUDENT_H
+
 #include <string>
 #include <vector>
+#include "Contact.h"
+#include "Department.h"
 
 
-class Student {
+class Student : public Contact, public Department {
 public:
     //Gender
-    enum Gender
-    {
+    enum Gender {
         Male,
         Female,
         NotSpecified
-    } ;
+    };
+
     void setGender(Gender gender);
+
     std::string getGender();
 
     //ID
     bool setId(int Id);
+
     int getId();
 
     //Date
@@ -29,24 +34,27 @@ public:
         int Day;
         int Month;
         int Year;
-    } ;
+    };
+
     bool setDate(int year, int month, int day);
+
     std::string getDate();
 
     //Name
     bool setName(const std::string &name);
+
     const std::string &getName() const;
 
     //Email
     void setEmail(const std::string &email);
-    const std::string &getEmail() const;
 
+    const std::string &getEmail() const;
 
 
     struct CourseGrade {
         std::string Course;
         float Grade;
-    } ;
+    };
     std::vector<CourseGrade> Courses;
 
 private:

@@ -1,4 +1,4 @@
-/home/mfc/programs/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mfc/projects/university
+/home/mfc/programs/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mfc/projects/university-cpp-project
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/mfc/projects/university/cmake-build-debug
+-- Build files have been written to: /home/mfc/projects/university-cpp-project/cmake-build-debug

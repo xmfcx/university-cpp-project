@@ -43,10 +43,10 @@ RM = /home/mfc/programs/clion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mfc/projects/university
+CMAKE_SOURCE_DIR = /home/mfc/projects/university-cpp-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mfc/projects/university/cmake-build-debug
+CMAKE_BINARY_DIR = /home/mfc/projects/university-cpp-project/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/university.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/university.dir/flags.make
 
 CMakeFiles/university.dir/main.cpp.o: CMakeFiles/university.dir/flags.make
 CMakeFiles/university.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfc/projects/university/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/university.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/university.dir/main.cpp.o -c /home/mfc/projects/university/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfc/projects/university-cpp-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/university.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/university.dir/main.cpp.o -c /home/mfc/projects/university-cpp-project/main.cpp
 
 CMakeFiles/university.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/university.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfc/projects/university/main.cpp > CMakeFiles/university.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfc/projects/university-cpp-project/main.cpp > CMakeFiles/university.dir/main.cpp.i
 
 CMakeFiles/university.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/university.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfc/projects/university/main.cpp -o CMakeFiles/university.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfc/projects/university-cpp-project/main.cpp -o CMakeFiles/university.dir/main.cpp.s
 
 CMakeFiles/university.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/university.dir/main.cpp.o.provides.build: CMakeFiles/university.dir/m
 
 CMakeFiles/university.dir/Student.cpp.o: CMakeFiles/university.dir/flags.make
 CMakeFiles/university.dir/Student.cpp.o: ../Student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfc/projects/university/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/university.dir/Student.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/university.dir/Student.cpp.o -c /home/mfc/projects/university/Student.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfc/projects/university-cpp-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/university.dir/Student.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/university.dir/Student.cpp.o -c /home/mfc/projects/university-cpp-project/Student.cpp
 
 CMakeFiles/university.dir/Student.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/university.dir/Student.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfc/projects/university/Student.cpp > CMakeFiles/university.dir/Student.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfc/projects/university-cpp-project/Student.cpp > CMakeFiles/university.dir/Student.cpp.i
 
 CMakeFiles/university.dir/Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/university.dir/Student.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfc/projects/university/Student.cpp -o CMakeFiles/university.dir/Student.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfc/projects/university-cpp-project/Student.cpp -o CMakeFiles/university.dir/Student.cpp.s
 
 CMakeFiles/university.dir/Student.cpp.o.requires:
 
@@ -117,7 +117,7 @@ university: CMakeFiles/university.dir/main.cpp.o
 university: CMakeFiles/university.dir/Student.cpp.o
 university: CMakeFiles/university.dir/build.make
 university: CMakeFiles/university.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mfc/projects/university/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable university"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mfc/projects/university-cpp-project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable university"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/university.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/university.dir/clean:
 .PHONY : CMakeFiles/university.dir/clean
 
 CMakeFiles/university.dir/depend:
-	cd /home/mfc/projects/university/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mfc/projects/university /home/mfc/projects/university /home/mfc/projects/university/cmake-build-debug /home/mfc/projects/university/cmake-build-debug /home/mfc/projects/university/cmake-build-debug/CMakeFiles/university.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mfc/projects/university-cpp-project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mfc/projects/university-cpp-project /home/mfc/projects/university-cpp-project /home/mfc/projects/university-cpp-project/cmake-build-debug /home/mfc/projects/university-cpp-project/cmake-build-debug /home/mfc/projects/university-cpp-project/cmake-build-debug/CMakeFiles/university.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/university.dir/depend
 
