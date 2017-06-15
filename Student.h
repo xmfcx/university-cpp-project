@@ -56,13 +56,13 @@ public:
         std::string Course;
         float Grade;
     };
-    std::vector<CourseGrade> Courses;
+    std::vector<CourseGrade> courses;
 
 
 
 private:
     Gender gender;
-    int Id;
+    int id;
     Date date;
     std::string name;
     std::string email;

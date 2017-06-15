@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Student.h"
-#include "University.h"
+#include "UniCli.h"
 
 int main() {
     auto student1 = Student();
@@ -19,7 +19,8 @@ int main() {
     std::cout << "Department: " << student1.getDepartmentName() << std::endl;
     std::cout << "Faculity: " << student1.getFacultyName() << std::endl;
     auto uni = University();
-    uni.WelcomeScreen();
+    auto uniCli = UniCli(uni);
+    uniCli.welcomeScreen();
 
     return 0;
 }

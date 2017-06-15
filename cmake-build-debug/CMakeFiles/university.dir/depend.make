@@ -7,6 +7,14 @@ CMakeFiles/university.dir/Student.cpp.o: ../Faculty.h
 CMakeFiles/university.dir/Student.cpp.o: ../Student.cpp
 CMakeFiles/university.dir/Student.cpp.o: ../Student.h
 
+CMakeFiles/university.dir/UniCli.cpp.o: ../Contact.h
+CMakeFiles/university.dir/UniCli.cpp.o: ../Department.h
+CMakeFiles/university.dir/UniCli.cpp.o: ../Faculty.h
+CMakeFiles/university.dir/UniCli.cpp.o: ../Student.h
+CMakeFiles/university.dir/UniCli.cpp.o: ../UniCli.cpp
+CMakeFiles/university.dir/UniCli.cpp.o: ../UniCli.h
+CMakeFiles/university.dir/UniCli.cpp.o: ../University.h
+
 CMakeFiles/university.dir/University.cpp.o: ../Contact.h
 CMakeFiles/university.dir/University.cpp.o: ../Department.h
 CMakeFiles/university.dir/University.cpp.o: ../Faculty.h
@@ -18,6 +26,7 @@ CMakeFiles/university.dir/main.cpp.o: ../Contact.h
 CMakeFiles/university.dir/main.cpp.o: ../Department.h
 CMakeFiles/university.dir/main.cpp.o: ../Faculty.h
 CMakeFiles/university.dir/main.cpp.o: ../Student.h
+CMakeFiles/university.dir/main.cpp.o: ../UniCli.h
 CMakeFiles/university.dir/main.cpp.o: ../University.h
 CMakeFiles/university.dir/main.cpp.o: ../main.cpp
 

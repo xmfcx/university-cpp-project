@@ -36,6 +36,16 @@ Contact.h
 Department.h
 /home/mfc/projects/university-cpp-project/Department.h
 
+/home/mfc/projects/university-cpp-project/UniCli.cpp
+UniCli.h
+/home/mfc/projects/university-cpp-project/UniCli.h
+
+/home/mfc/projects/university-cpp-project/UniCli.h
+Student.h
+/home/mfc/projects/university-cpp-project/Student.h
+University.h
+/home/mfc/projects/university-cpp-project/University.h
+
 /home/mfc/projects/university-cpp-project/University.cpp
 University.h
 /home/mfc/projects/university-cpp-project/University.h
@@ -57,6 +67,6 @@ iostream
 -
 Student.h
 /home/mfc/projects/university-cpp-project/Student.h
-University.h
-/home/mfc/projects/university-cpp-project/University.h
+UniCli.h
+/home/mfc/projects/university-cpp-project/UniCli.h
 

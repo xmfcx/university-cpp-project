@@ -21,7 +21,7 @@ std::string Student::getGender() {
 
 bool Student::setId(int Id) {
     if (Id > 10000000 && Id < 20000000) {
-        Student::Id = Id;
+        Student::id = Id;
         return true;
     } else {
         std::cout << "ID must be between 1000 0000 and 2000 0000" << std::endl;
@@ -30,7 +30,7 @@ bool Student::setId(int Id) {
 }
 
 int Student::getId() {
-    return Id;
+    return id;
 }
 
 bool Student::setDate(int year, int month, int day) {

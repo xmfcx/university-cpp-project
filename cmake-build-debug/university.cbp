@@ -99,6 +99,12 @@
 		<Unit filename="/home/mfc/projects/university-cpp-project/Student.h">
 			<Option target="university"/>
 		</Unit>
+		<Unit filename="/home/mfc/projects/university-cpp-project/UniCli.cpp">
+			<Option target="university"/>
+		</Unit>
+		<Unit filename="/home/mfc/projects/university-cpp-project/UniCli.h">
+			<Option target="university"/>
+		</Unit>
 		<Unit filename="/home/mfc/projects/university-cpp-project/University.cpp">
 			<Option target="university"/>
 		</Unit>

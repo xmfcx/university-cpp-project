@@ -150,6 +150,33 @@ Student.cpp.s:
 	$(MAKE) -f CMakeFiles/university.dir/build.make CMakeFiles/university.dir/Student.cpp.s
 .PHONY : Student.cpp.s
 
+UniCli.o: UniCli.cpp.o
+
+.PHONY : UniCli.o
+
+# target to build an object file
+UniCli.cpp.o:
+	$(MAKE) -f CMakeFiles/university.dir/build.make CMakeFiles/university.dir/UniCli.cpp.o
+.PHONY : UniCli.cpp.o
+
+UniCli.i: UniCli.cpp.i
+
+.PHONY : UniCli.i
+
+# target to preprocess a source file
+UniCli.cpp.i:
+	$(MAKE) -f CMakeFiles/university.dir/build.make CMakeFiles/university.dir/UniCli.cpp.i
+.PHONY : UniCli.cpp.i
+
+UniCli.s: UniCli.cpp.s
+
+.PHONY : UniCli.s
+
+# target to generate assembly for a file
+UniCli.cpp.s:
+	$(MAKE) -f CMakeFiles/university.dir/build.make CMakeFiles/university.dir/UniCli.cpp.s
+.PHONY : UniCli.cpp.s
+
 University.o: University.cpp.o
 
 .PHONY : University.o
@@ -216,6 +243,9 @@ help:
 	@echo "... Student.o"
 	@echo "... Student.i"
 	@echo "... Student.s"
+	@echo "... UniCli.o"
+	@echo "... UniCli.i"
+	@echo "... UniCli.s"
 	@echo "... University.o"
 	@echo "... University.i"
 	@echo "... University.s"
