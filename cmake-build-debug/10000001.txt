@@ -1,10 +1,10 @@
 10000001
-bbb
-Male
-1994-4-26
-5511421052
-Department of Mechatronics
-Faculity of Mechanics,1
-aaa,55
-bbb,100
-cccc,33
+aa
+NotSpecified
+23
+2017-6-16
+214125412532543643654783
+Department of Electrical Engineering
+Faculty of Electrical & Electronics,2
+Electromagnetic Wave Theory,32
+Mathematics 2,32

@@ -10,17 +10,13 @@
 
 class Contact {
 private:
-    long phoneNum;
+    std::string phoneNum;
 public:
-    long getPhoneNum() const {
+    std::string getPhoneNum() const {
         return phoneNum;
     }
 
-    bool setPhoneNum(long phoneNum) {
-        if (phoneNum < 1000000000 || phoneNum > 9990000000) {
-            std::cout << "Phone number should be in following format: 5332227788" << std::endl;
-            return false;
-        }
+    bool setPhoneNum(std::string phoneNum) {
         Contact::phoneNum = phoneNum;
         return true;
     }

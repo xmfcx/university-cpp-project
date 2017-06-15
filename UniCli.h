@@ -33,6 +33,10 @@ private:
 
     bool setStudentMail(Student &student);
 
+    bool setStudentAge(Student &student);
+
+    bool setStudentPhone(Student &student);
+
     bool setStudentGender(Student &student);
 
     bool setStudentName(Student &student);

@@ -21,7 +21,6 @@ std::string UniCli::getInput() {
 }
 
 int UniCli::getNumberInput() {
-
     int input;
 
     try {
@@ -35,6 +34,7 @@ int UniCli::getNumberInput() {
 
     return input;
 }
+
 
 void UniCli::welcomeLetterToWork(char input) {
     input = std::tolower(input, std::locale());
@@ -93,6 +93,14 @@ void UniCli::addStudent() {
     if (!setStudentGender(student_new))
         return;
 
+    //Age
+    if (!setStudentAge(student_new))
+        return;
+
+    //Phone
+    if (!setStudentPhone(student_new))
+        return;
+
     //Email
     if (!setStudentMail(student_new))
         return;
@@ -116,6 +124,27 @@ bool UniCli::setStudentMail(Student &student) {
             return false;
         student.setEmail(input);
         say("Student Email set to: " + student.getEmail());
+        return true;
+    }
+}
+
+
+bool UniCli::setStudentAge(Student &student) {
+    while (true) {
+        say("Enter Student's Age: ");
+        int input = getNumberInput();
+        student.setAge(input);
+        say("Student Age set to: " + student.getAge());
+        return true;
+    }
+}
+
+bool UniCli::setStudentPhone(Student &student) {
+    while (true) {
+        say("Enter Student's Phone: ");
+        std::string input = getInput();
+        student.setPhoneNum(input);
+        say("Student Phone set to: " + student.getPhoneNum());
         return true;
     }
 }
@@ -284,6 +313,8 @@ void UniCli::updateStudent() {
                         say("2 - Edit Email");
                         say("3 - Add Courses");
                         say("4 - Remove Courses");
+                        say("5 - Edit Age");
+                        say("6 - Edit Phone");
 
 
                         input = getNumberInput();
@@ -314,6 +345,22 @@ void UniCli::updateStudent() {
                             case 4:
                                 //Remove Courses
                                 removeCourses(student);
+                                break;
+
+                            case 5:
+                                //Age
+                                while (true) {
+                                    if (setStudentAge(student))
+                                        break;
+                                }
+                                break;
+
+                            case 6:
+                                //Phone
+                                while (true) {
+                                    if (setStudentPhone(student))
+                                        break;
+                                }
                                 break;
                         }
 
@@ -409,6 +456,7 @@ void UniCli::saveStudent(Student *student) {
     myfile << student->getId() << std::endl;
     myfile << student->getName() << std::endl;
     myfile << student->getGender() << std::endl;
+    myfile << student->getAge() << std::endl;
     myfile << student->getDate() << std::endl;
     myfile << student->getPhoneNum() << std::endl;
     myfile << student->getDepartmentName() << std::endl;
@@ -446,6 +494,9 @@ void UniCli::loadStudent(int id) {
             student.setGender(Student::Female);
         else if (line == "NotSpecified")
             student.setGender(Student::NotSpecified);
+        //Age
+        getline(myfile, line);
+        student.setAge(std::stoi(line));
         //Date
         getline(myfile, line);
 
@@ -467,7 +518,7 @@ void UniCli::loadStudent(int id) {
 
         //Phone
         getline(myfile, line);
-        student.setPhoneNum(std::stol(line));
+        student.setPhoneNum(line);
 
         //Department
         getline(myfile, line);

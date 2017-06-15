@@ -10,6 +10,7 @@
 #include <vector>
 #include <map>
 #include <exception>
+#include <ctime>
 #include "Student.h"
 
 class University {

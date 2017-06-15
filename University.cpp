@@ -155,8 +155,14 @@ int University::generateStudentId() {
 
 
 bool University::addStudent(Student &new_student) {
-
     new_student.setId(generateStudentId());
+
+    time_t t = time(0);   // get time now
+    struct tm * now = localtime( & t );
+
+    new_student.setDate(now->tm_year + 1900,
+                        now->tm_mon + 1,
+                        now->tm_mday);
 
     students.push_back(new_student);
 }

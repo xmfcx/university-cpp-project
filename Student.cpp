@@ -88,6 +88,7 @@ void Student::displayStudent() {
     std::cout << "Student with ID: " << getId() << std::endl;
     std::cout << "Name: " << getName() << std::endl;
     std::cout << "Gender: " << getGender() << std::endl;
+    std::cout << "Age: " << getAge() << std::endl;
     std::cout << "Date: " << getDate() << std::endl;
     std::cout << "Phone: " << getPhoneNum() << std::endl;
     std::cout << "Department: " << getDepartmentName() << std::endl;
@@ -120,5 +121,13 @@ int Student::generateCourseGrade() {
     int min = 0;
     int max = 100;
     return min + (rand() % static_cast<int>(max - min + 1));
+}
+
+int Student::getAge() const {
+    return age;
+}
+
+void Student::setAge(int age) {
+    Student::age = age;
 }
 

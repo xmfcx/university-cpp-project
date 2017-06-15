@@ -73,6 +73,13 @@ private:
     Gender gender;
     int id;
     Date date;
+    int age;
+public:
+    int getAge() const;
+
+    void setAge(int age);
+
+private:
     std::string name;
     std::string email;
 
