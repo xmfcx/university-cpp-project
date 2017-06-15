@@ -59,6 +59,15 @@ public:
     std::vector<CourseGrade> courses;
 
 
+    void displayStudent();
+
+    void addCourse(std::string course_name, int grade);
+
+    void listCourses();
+
+    void removeCourse(int index);
+
+    int generateCourseGrade();
 
 private:
     Gender gender;

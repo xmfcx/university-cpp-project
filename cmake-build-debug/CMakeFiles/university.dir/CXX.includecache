@@ -21,8 +21,6 @@ string
 /home/mfc/projects/university-cpp-project/Student.cpp
 iostream
 -
-ctype.h
--
 Student.h
 /home/mfc/projects/university-cpp-project/Student.h
 

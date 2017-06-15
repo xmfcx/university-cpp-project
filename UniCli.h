@@ -11,21 +11,32 @@
 
 class UniCli {
 private:
+    bool isRunning = true;
+
     char getChar();
+
     std::string getInput();
+
     int getNumberInput();
+
     void say(std::string phrase);
 
     void addStudent();
+
     void welcomeLetterToWork(char input);
+
     bool cancelling(std::string input);
+
     bool setStudentMail(Student &student);
+
     bool setStudentGender(Student &student);
+
     bool setStudentName(Student &student);
 
-    bool isRunning = true;
+    void addCourses(Student &student);
 
-    University& uniRef;
+    void updateStudent();
+    University &uniRef;
 public:
     UniCli(University &uniRef);
 

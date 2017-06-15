@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include <ctype.h>
 #include "Student.h"
 
 void Student::setGender(Student::Gender gender) {
@@ -84,3 +83,42 @@ void Student::setEmail(const std::string &email) {
 const std::string &Student::getEmail() const {
     return email;
 }
+
+void Student::displayStudent() {
+    std::cout << "Student with ID: " << getId() << std::endl;
+    std::cout << "Name: " << getName() << std::endl;
+    std::cout << "Gender: " << getGender() << std::endl;
+    std::cout << "Date: " << getDate() << std::endl;
+    std::cout << "Phone: " << getPhoneNum() << std::endl;
+    std::cout << "Department: " << getDepartmentName() << std::endl;
+    std::cout << "Faculity: " << getFacultyName() << std::endl;
+    std::cout << std::endl;
+}
+
+void Student::addCourse(std::string course_name, int grade) {
+    auto coursgrad = CourseGrade();
+    coursgrad.Course = course_name;
+    coursgrad.Grade = grade;
+    courses.push_back(coursgrad);
+}
+
+void Student::listCourses() {
+    for (int i = 0; i < courses.size(); i++) {
+        CourseGrade &coursgrad = courses[i];
+        std::cout << i << " - " << coursgrad.Course << ": " << coursgrad.Grade << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+void Student::removeCourse(int index) {
+    if (index < courses.size() && index >= 0) {
+        courses.erase(courses.begin() + index);
+    }
+}
+
+int Student::generateCourseGrade() {
+    int min = 0;
+    int max = 100;
+    return min + (rand() % static_cast<int>(max - min + 1));
+}
+

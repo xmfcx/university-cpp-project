@@ -22,14 +22,31 @@ private:
     std::map<int, std::string> fac_architec;
     std::map<int, std::map<int, std::string>> fac_to_dep;
 
+    std::map<int, std::string> cours_mecha;
+    std::map<int, std::string> cours_electro;
+    std::map<int, std::string> cours_architec;
+    std::map<int, std::map<int, std::string>> fac_to_cours;
+
     int lastStudentId;
+
     int generateStudentId();
+
 public:
+    const std::map<int, std::map<int, std::string>> &getFac_to_cours() const;
+
     const std::map<int, std::map<int, std::string>> &getFac_to_dep() const;
+
     const std::map<int, std::string> &getFaculty_map() const;
+
     University();
+
     long getStudentAmount() const;
+
     bool addStudent(Student &new_student);
+
+    void listStudents();
+
+    Student& getStudent(int i);
 };
 
 

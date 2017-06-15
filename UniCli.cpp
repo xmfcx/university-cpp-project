@@ -146,6 +146,10 @@ void UniCli::addStudent() {
     if (!setStudentMail(student_new))
         return;
 
+
+    addCourses(student_new);
+
+
     uniRef.addStudent(student_new);
     say("Congratulations, Your ID is given: " + std::to_string(student_new.getId()));
 }
@@ -221,4 +225,66 @@ bool UniCli::setStudentName(Student &student) {
 }
 
 UniCli::UniCli(University &uniRef) : uniRef(uniRef) {}
+
+void UniCli::addCourses(Student &student) {
+    while (true) {
+        say("Which Course? Options:");
+        say("0: Cancel");
+
+        //Get faculty index
+        int faculty_index = 0;
+        auto faculty_map = uniRef.getFaculty_map();
+        for (auto const &entry : faculty_map) {
+            if (entry.second == student.getFacultyName()) {
+                faculty_index = entry.first;
+                break;
+            }
+        }
+
+        auto fac_to_course = uniRef.getFac_to_cours();
+        auto course_map = fac_to_course[faculty_index];
+
+        //List Courses
+        for (auto const &entry : course_map) {
+            say(std::to_string(entry.first) + ": " + entry.second);
+        }
+
+        int input = getNumberInput();
+        switch (input) {
+            case 0:
+                say("Cancelling Operation...");
+                return;
+            default:
+                if (course_map.count(input)) {
+                    auto course_name = course_map[input];
+                    student.addCourse(course_name, student.generateCourseGrade());
+                    say("Course Added, New Course List:");
+                    student.listCourses();
+                }
+        }
+    }
+}
+
+void UniCli::updateStudent() {
+    say("Select Student to Update:");
+    say("0: Cancel");
+    uniRef.listStudents();
+
+    int input = getNumberInput();
+    switch (input) {
+        case 0:
+            say("Cancelling Operation...");
+            return;
+        default:
+            try {
+                Student &student = uniRef.getStudent(input - 1);
+
+            }
+            catch (const char *msg) {
+                say(msg);
+                break;
+            }
+
+    }
+}
 
