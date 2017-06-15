@@ -1,0 +1,10 @@
+10000001
+bbb
+Male
+1994-4-26
+5511421052
+Department of Mechatronics
+Faculity of Mechanics,1
+aaa,55
+bbb,100
+cccc,33

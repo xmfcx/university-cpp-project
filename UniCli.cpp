@@ -14,7 +14,6 @@ char UniCli::getChar() {
     return input[0];
 }
 
-
 std::string UniCli::getInput() {
     std::string input;
     std::getline(std::cin, input);
@@ -36,7 +35,6 @@ int UniCli::getNumberInput() {
 
     return input;
 }
-
 
 void UniCli::welcomeLetterToWork(char input) {
     input = std::tolower(input, std::locale());
@@ -60,6 +58,7 @@ void UniCli::welcomeLetterToWork(char input) {
 }
 
 void UniCli::welcomeScreen() {
+    readStudents();
     while (isRunning) {
         std::cout << std::endl << std::endl << std::endl;
         say("Welcome To Student Manager 2000!!!");
@@ -73,7 +72,6 @@ void UniCli::welcomeScreen() {
         welcomeLetterToWork(getChar());
     }
 }
-
 
 void UniCli::addStudent() {
     say("Adding New Student...");
@@ -104,9 +102,11 @@ void UniCli::addStudent() {
 
 
     uniRef.addStudent(student_new);
+    std::thread saver_thread(&saveStudent, &student_new);
+    saver_thread.join();
     say("Congratulations, Your ID is given: " + std::to_string(student_new.getId()));
-}
 
+}
 
 bool UniCli::setStudentMail(Student &student) {
     while (true) {
@@ -275,49 +275,59 @@ void UniCli::updateStudent() {
             default:
                 try {
                     Student &student = uniRef.getStudent(input - 1);
-                    std::cout << "You selected student " << student.getId() << std::endl;
-                    say("0 - Cancel");
-                    say("1 - Edit Name");
-                    say("2 - Edit Email");
-                    say("3 - Add Courses");
-                    say("4 - Remove Courses");
+                    bool editing_student = true;
+                    while (editing_student) {
+                        std::cout << "You selected student " << student.getId() << std::endl;
+
+                        say("0 - Cancel");
+                        say("1 - Edit Name");
+                        say("2 - Edit Email");
+                        say("3 - Add Courses");
+                        say("4 - Remove Courses");
 
 
-                    input = getNumberInput();
-                    switch (input) {
-                        case 0:
-                            say("Cancelling Operation...");
-                            break;
-                        case 1:
-                            //Name
-                            while (true) {
-                                if (setStudentName(student))
-                                    break;
-                            }
-                            break;
-                        case 2:
-                            //Email
-                            while (true) {
-                                if (setStudentMail(student))
-                                    break;
-                            }
-                            break;
-                        case 3:
-                            //Add Courses
-                            addCourses(student);
-                            break;
+                        input = getNumberInput();
+                        switch (input) {
+                            case 0:
+                                say("Cancelling Operation...");
+                                editing_student = false;
+                                break;
+                            case 1:
+                                //Name
+                                while (true) {
+                                    if (setStudentName(student))
+                                        break;
+                                }
+                                break;
+                            case 2:
+                                //Email
+                                while (true) {
+                                    if (setStudentMail(student))
+                                        break;
+                                }
+                                break;
+                            case 3:
+                                //Add Courses
+                                addCourses(student);
+                                break;
 
-                        case 4:
-                            //Remove Courses
-                            removeCourses(student);
-                            break;
+                            case 4:
+                                //Remove Courses
+                                removeCourses(student);
+                                break;
+                        }
+
                     }
+
+                    std::thread saver_thread(&saveStudent, &student);
+                    saver_thread.join();
                 }
                 catch (const char *msg) {
                     say(msg);
                     break;
                 }
         }
+
     }
 }
 
@@ -379,7 +389,123 @@ void UniCli::removeStudent() {
                 say("Cancelling Operation...");
                 return;
             default:
+                try {
+                    Student &student = uniRef.getStudent(input - 1);
+                    std::cout << "You removed student " << student.getId() << std::endl;
+                    std::remove((std::to_string(student.getId()) + ".txt").c_str());
+                }
+                catch (const char *msg) {
+                    say(msg);
+                    break;
+                }
                 uniRef.removeStudent(input - 1);
         }
     }
 }
+
+void UniCli::saveStudent(Student *student) {
+    std::ofstream myfile;
+    myfile.open(std::to_string(student->getId()) + ".txt");
+    myfile << student->getId() << std::endl;
+    myfile << student->getName() << std::endl;
+    myfile << student->getGender() << std::endl;
+    myfile << student->getDate() << std::endl;
+    myfile << student->getPhoneNum() << std::endl;
+    myfile << student->getDepartmentName() << std::endl;
+    myfile << student->getFacultyName() << "," << student->faculty_id << std::endl;
+    for (int i = 0; i < student->courses.size(); i++) {
+        myfile << student->courses[i].Course << "," << student->courses[i].Grade << std::endl;
+    }
+    myfile.close();
+}
+
+
+void UniCli::readStudents() {
+    for (int i = 10000001; i < 10000050; i++) {
+        loadStudent(i);
+    }
+}
+
+void UniCli::loadStudent(int id) {
+    std::string line;
+    std::ifstream myfile(std::to_string(id) + ".txt");
+    if (myfile.is_open()) {
+        std::cout << "reading " << std::endl;
+        auto student = Student();
+        //ID
+        getline(myfile, line);
+        student.setId(std::stoi(line));
+        //Name
+        getline(myfile, line);
+        student.setName(line);
+        //Gender
+        getline(myfile, line);
+        if (line == "Male")
+            student.setGender(Student::Male);
+        else if (line == "Female")
+            student.setGender(Student::Female);
+        else if (line == "NotSpecified")
+            student.setGender(Student::NotSpecified);
+        //Date
+        getline(myfile, line);
+
+        std::string delimiter = "-";
+        std::vector<std::string> pieces;
+        size_t pos = 0;
+        std::string token;
+        while ((pos = line.find(delimiter)) != std::string::npos) {
+            token = line.substr(0, pos);
+            pieces.push_back(token);
+            line.erase(0, pos + delimiter.length());
+        }
+        pieces.push_back(line);
+        int year, month, day;
+        year = std::stoi(pieces[0]);
+        month = std::stoi(pieces[1]);
+        day = std::stoi(pieces[2]);
+        student.setDate(year, month, day);
+
+        //Phone
+        getline(myfile, line);
+        student.setPhoneNum(std::stol(line));
+
+        //Department
+        getline(myfile, line);
+        student.setDepartmentName(line);
+
+        //Faculty Name, ID
+        getline(myfile, line);
+
+        delimiter = ",";
+        std::vector<std::string> pieces2;
+        pos = 0;
+        while ((pos = line.find(delimiter)) != std::string::npos) {
+            token = line.substr(0, pos);
+            pieces2.push_back(token);
+            line.erase(0, pos + delimiter.length());
+        }
+        pieces2.push_back(line);
+
+        student.setFacultyName(pieces2[0]);
+        student.faculty_id = std::stoi(pieces2[1]);
+
+
+        //Courses And Grades
+        delimiter = ",";
+        while (getline(myfile, line)) {
+            std::vector<std::string> pieces3;
+            pos = 0;
+            while ((pos = line.find(delimiter)) != std::string::npos) {
+                token = line.substr(0, pos);
+                pieces3.push_back(token);
+                line.erase(0, pos + delimiter.length());
+            }
+            pieces3.push_back(line);
+            student.addCourse(pieces3[0], std::stoi(pieces3[1]));
+        }
+        myfile.close();
+        uniRef.addStudentFromFile(student);
+    } else std::cout << "Unable to open file";
+
+}
+

@@ -44,6 +44,8 @@ public:
 
     bool addStudent(Student &new_student);
 
+    bool addStudentFromFile(Student &new_student);
+
     void listStudents();
 
     Student& getStudent(int i);

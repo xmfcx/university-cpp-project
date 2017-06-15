@@ -7,6 +7,10 @@
 
 #include "Student.h"
 #include "University.h"
+#include <fstream>
+#include <string>
+#include <thread>
+#include <dirent.h>
 
 
 class UniCli {
@@ -46,6 +50,13 @@ private:
     void displayStudent();
 
     void removeStudent();
+
+
+    static void saveStudent(Student *student);
+
+    void loadStudent(int id);
+
+    void readStudents();
 
     University &uniRef;
 public:

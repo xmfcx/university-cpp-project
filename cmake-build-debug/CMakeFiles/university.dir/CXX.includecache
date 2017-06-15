@@ -43,6 +43,14 @@ Student.h
 /home/mfc/projects/university-cpp-project/Student.h
 University.h
 /home/mfc/projects/university-cpp-project/University.h
+fstream
+-
+string
+-
+thread
+-
+dirent.h
+-
 
 /home/mfc/projects/university-cpp-project/University.cpp
 University.h

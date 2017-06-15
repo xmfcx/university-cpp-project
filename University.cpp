@@ -186,3 +186,8 @@ void University::removeStudent(int index) {
     }
 }
 
+bool University::addStudentFromFile(Student &new_student) {
+    students.push_back(new_student);
+    lastStudentId = new_student.getId();
+}
+
