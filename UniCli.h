@@ -33,9 +33,20 @@ private:
 
     bool setStudentName(Student &student);
 
+    bool setStudentDepartment(Student &student);
+
+    bool setStudentFaculty(Student &student);
+
     void addCourses(Student &student);
 
+    void removeCourses(Student &student);
+
     void updateStudent();
+
+    void displayStudent();
+
+    void removeStudent();
+
     University &uniRef;
 public:
     UniCli(University &uniRef);

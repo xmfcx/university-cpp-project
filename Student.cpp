@@ -105,7 +105,7 @@ void Student::addCourse(std::string course_name, int grade) {
 void Student::listCourses() {
     for (int i = 0; i < courses.size(); i++) {
         CourseGrade &coursgrad = courses[i];
-        std::cout << i << " - " << coursgrad.Course << ": " << coursgrad.Grade << std::endl;
+        std::cout << i + 1 << " - " << coursgrad.Course << ": " << coursgrad.Grade << std::endl;
     }
     std::cout << std::endl;
 }

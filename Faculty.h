@@ -19,6 +19,7 @@ public:
     void setFacultyName(const std::string &facultyName) {
         Faculty::facultyName = facultyName;
     }
+    int faculty_id;
 };
 
 

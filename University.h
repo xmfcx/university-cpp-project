@@ -47,6 +47,8 @@ public:
     void listStudents();
 
     Student& getStudent(int i);
+
+    void removeStudent(int index);
 };
 
 

@@ -37,7 +37,7 @@ University::University() {
 
 
     //Course Maps
-    cours_architec = {
+    cours_mecha = {
             {1,  "Introduction to Industrial Engineering"},
             {2,  "Mathematics 1"},
             {3,  "Computer Aided Design"},
@@ -178,5 +178,11 @@ Student &University::getStudent(int i) {
         return students[i];
     } else
         throw "Select correctly please.";
+}
+
+void University::removeStudent(int index) {
+    if (index < students.size() && index >= 0) {
+        students.erase(students.begin() + index);
+    }
 }
 
