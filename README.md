@@ -1,5 +1,16 @@
 # university-cpp-project
-
+- [university-cpp-project](#university-cpp-project)
+  - [Build](#build)
+    - [Requirements](#requirements)
+    - [Build Instructions](#build-instructions)
+  - [Run](#run)
+  - [How to Use](#how-to-use)
+    - [Add a student](#add-a-student)
+    - [Display a student](#display-a-student)
+    - [Update a student](#update-a-student)
+    - [Remove a student](#remove-a-student)
+    - [Exit the program](#exit-the-program)
+    - [Reopening the program](#reopening-the-program)
 
 ## Build
 
