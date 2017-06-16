@@ -99,3 +99,10 @@ And note that his ID.bin is removed aswell from build dir. And only second stude
 ### Exit the program
 
 Just press `e` on main screen, that's all.
+
+### Reopening the program
+
+If you have saved students previously, (you have ID.bin files in build directory) program will automatically load them for you and you can just keep adding or removing students :D
+
+![reopen program](https://image.ibb.co/mDfXq5/Screenshot_2017_06_16_13_12_07.png)
+
