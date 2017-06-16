@@ -32,6 +32,7 @@ Here you can see more detailed top view on these interconnected 4 classes:
 
 ## Code in General
 * Everything in code is written in a readable object oriented fashion and it is easy to extend it and maintain it.
+* Classes handled in separate .h and .cpp files for ease.
 * Object encapsulation is heavily utilized and clutter is well hidden in classes. Only necessary things are left public.
 * Input exception handling is done, when user enters -say- letters when program expects numbers, it prints out the error and keeps working without crashing.
 * Students and their course-grades are kept in vectors, therefore dynamic memory handling is also well done.
