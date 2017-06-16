@@ -439,7 +439,7 @@ void UniCli::removeStudent() {
                 try {
                     Student &student = uniRef.getStudent(input - 1);
                     std::cout << "You removed student " << student.getId() << std::endl;
-                    std::remove((std::to_string(student.getId()) + ".txt").c_str());
+                    std::remove((std::to_string(student.getId()) + ".bin").c_str());
                 }
                 catch (const char *msg) {
                     say(msg);
@@ -452,7 +452,7 @@ void UniCli::removeStudent() {
 
 void UniCli::saveStudent(Student *student) {
     std::ofstream myfile;
-    myfile.open(std::to_string(student->getId()) + ".txt");
+    myfile.open(std::to_string(student->getId()) + ".bin");
     myfile << student->getId() << std::endl;
     myfile << student->getName() << std::endl;
     myfile << student->getGender() << std::endl;
@@ -476,7 +476,7 @@ void UniCli::readStudents() {
 
 void UniCli::loadStudent(int id) {
     std::string line;
-    std::ifstream myfile(std::to_string(id) + ".txt");
+    std::ifstream myfile(std::to_string(id) + ".bin", std::ios::binary);
     if (myfile.is_open()) {
         auto student = Student();
         //ID
