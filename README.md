@@ -70,3 +70,11 @@ When you are done adding courses you can enter `0` and it will create the studen
 Also when you add a student, program automatically creates a [StudentID].bin file
 
 ![add student](https://image.ibb.co/dG1xq5/Screenshot_2017_06_16_12_48_02.png)
+
+### Display a student
+I have also added a 2nd student myself and here will show how to display info about students that are registered.
+
+Simply when you are in main screen, press `d` and follow instructions.
+
+![display student](https://image.ibb.co/dK2yxk/Screenshot_2017_06_16_12_51_39.png)
+
