@@ -1,4 +1,6 @@
 # university-cpp-project
+This is the term project for following thing: https://github.com/xmfcx/university-cpp-project/blob/master/doc/Project.pdf
+
 Demonstration Video: https://www.youtube.com/watch?v=DBtH0VLe93s
 
 - [university-cpp-project](#university-cpp-project)
