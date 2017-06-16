@@ -1,8 +1,8 @@
 # university-cpp-project
-[Build](## Build)
-[Build](## Run)
-[Build](## How to Use)
-[Build](## Build)
+[Build](##build)
+[Build](##run)
+[Build](##how-to-use)
+[Build](##build)
 
 
 ## Build
