@@ -30,4 +30,4 @@ sudo chmod +x university
 (enter your password)
 ./university
 ```
-![running(https://image.ibb.co/dAM8xk/Screenshot_2017_06_16_12_30_39.png)
+![running](https://image.ibb.co/dAM8xk/Screenshot_2017_06_16_12_30_39.png)
