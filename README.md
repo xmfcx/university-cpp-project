@@ -78,3 +78,8 @@ Simply when you are in main screen, press `d` and follow instructions.
 
 ![display student](https://image.ibb.co/dK2yxk/Screenshot_2017_06_16_12_51_39.png)
 
+### Update a student
+
+Here you can see me update a student to remove some courses from him.
+
+![update student](https://image.ibb.co/kdW0ck/Screenshot_2017_06_16_12_55_41.png)
