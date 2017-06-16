@@ -165,6 +165,7 @@ bool University::addStudent(Student &new_student) {
                         now->tm_mday);
 
     students.push_back(new_student);
+    return true;
 }
 
 const std::map<int, std::map<int, std::string>> &University::getFac_to_cours() const {
@@ -195,5 +196,6 @@ void University::removeStudent(int index) {
 bool University::addStudentFromFile(Student &new_student) {
     students.push_back(new_student);
     lastStudentId = new_student.getId();
+    return true;
 }
 

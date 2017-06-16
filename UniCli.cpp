@@ -54,6 +54,8 @@ void UniCli::welcomeLetterToWork(char input) {
         case 'e' :
             isRunning = false;
             break;
+        default:
+            break;
     }
 }
 
@@ -236,8 +238,7 @@ void UniCli::addCourses(Student &student) {
 }
 
 bool UniCli::setStudentDepartment(Student &student) {
-    bool setting_department = true;
-    while (setting_department) {
+    while (true) {
         say("To which Department? Options:");
         say("0: Cancel");
         auto faculty_map = uniRef.getFaculty_map();
@@ -263,8 +264,7 @@ bool UniCli::setStudentDepartment(Student &student) {
 }
 
 bool UniCli::setStudentFaculty(Student &student) {
-    bool setting_faculty = true;
-    while (setting_faculty) {
+    while (true) {
         say("To which Faculity? Options:");
         say("0: Cancel");
         auto faculty_map = uniRef.getFaculty_map();
@@ -282,7 +282,6 @@ bool UniCli::setStudentFaculty(Student &student) {
                     student.faculty_id = input;
                     student.setFacultyName(faculty_map[input]);
                     say("Faculty set to " + student.getFacultyName());
-                    setting_faculty = false;
                     return true;
                 }
         }
@@ -457,6 +456,7 @@ void UniCli::saveStudent(Student *student) {
     myfile << student->getName() << std::endl;
     myfile << student->getGender() << std::endl;
     myfile << student->getAge() << std::endl;
+    myfile << student->getEmail() << std::endl;
     myfile << student->getDate() << std::endl;
     myfile << student->getPhoneNum() << std::endl;
     myfile << student->getDepartmentName() << std::endl;
@@ -496,6 +496,9 @@ void UniCli::loadStudent(int id) {
         //Age
         getline(myfile, line);
         student.setAge(std::stoi(line));
+        //Email
+        getline(myfile, line);
+        student.setEmail(line);
         //Date
         getline(myfile, line);
 
