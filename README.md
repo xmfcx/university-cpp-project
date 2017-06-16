@@ -54,3 +54,19 @@ Until this step you should have something like this:
 
 ![add student](https://image.ibb.co/cxSWHk/Screenshot_2017_06_16_12_39_37.png)
 
+And it is now asking you to select courses. It will also give you random grades once you chose courses.
+
+When you are done adding courses you can enter `0` and it will create the student for you and generate you an ID.
+
+```
+1 (A course)
+4 (A course)
+5 (A course)
+23 (A course)
+0 (Cancel)
+```
+![add student](https://image.ibb.co/mVvCOQ/Screenshot_2017_06_16_12_44_23.png)
+
+Also when you add a student, program automatically creates a [StudentID].bin file
+
+![add student](https://image.ibb.co/dG1xq5/Screenshot_2017_06_16_12_48_02.png)
