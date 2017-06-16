@@ -1,0 +1,3 @@
+/home/mfc/projects/university-cpp-project/build/CMakeFiles/edit_cache.dir
+/home/mfc/projects/university-cpp-project/build/CMakeFiles/rebuild_cache.dir
+/home/mfc/projects/university-cpp-project/build/CMakeFiles/university.dir

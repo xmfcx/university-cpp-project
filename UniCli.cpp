@@ -478,7 +478,6 @@ void UniCli::loadStudent(int id) {
     std::string line;
     std::ifstream myfile(std::to_string(id) + ".txt");
     if (myfile.is_open()) {
-        std::cout << "reading " << std::endl;
         auto student = Student();
         //ID
         getline(myfile, line);
@@ -554,9 +553,11 @@ void UniCli::loadStudent(int id) {
             pieces3.push_back(line);
             student.addCourse(pieces3[0], std::stoi(pieces3[1]));
         }
+
+        std::cout << "Read student " << student.getId() << std::endl;
         myfile.close();
         uniRef.addStudentFromFile(student);
-    } else std::cout << "Unable to open file";
+    } //else std::cout << "Unable to open file";
 
 }
 
