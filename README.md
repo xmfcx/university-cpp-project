@@ -83,3 +83,19 @@ Simply when you are in main screen, press `d` and follow instructions.
 Here you can see me update a student to remove some courses from him.
 
 ![update student](https://image.ibb.co/kdW0ck/Screenshot_2017_06_16_12_55_41.png)
+
+So, you can edit anything you want, add more courses, remove some etc. and you can press `0` again to cancel as it is in options and edit another student if you like. Or just press `0` again to cancel and go back to main screen.
+
+### Remove a student
+
+Removing a student is a very similar experience to what we have seen so far and it is easy.
+
+![remove student](https://image.ibb.co/g2cZ3Q/Screenshot_2017_06_16_12_59_36.png)
+
+And note that his ID.bin is removed aswell from build dir. And only second student left there.
+
+![remove student](https://image.ibb.co/eTt2q5/Screenshot_2017_06_16_13_01_44.png)
+
+### Exit the program
+
+Just press `e` on main screen, that's all.
